@@ -1,0 +1,21 @@
+.pole {
+    width: 414px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    border: 4px solid black;
+    background-color: black;
+    grid-gap: 2px;
+}
+
+.grid-item {
+    display: block;
+    width: 110px;
+    height: 110px;
+    background-color: #09a750;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

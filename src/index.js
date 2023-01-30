@@ -1,5 +1,6 @@
 import { getPosition } from "./js/app.js";
 import Game from "./js/game.js";
+import './css/game.css'
 
 const game = new Game();
 // console.log(game);

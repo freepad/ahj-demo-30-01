@@ -1,16 +1,25 @@
+import noGoblinImg from "../img/no_goblin.png";
+import goblimImg from "../img/goblin.png";
+
 export default class Game {
   constructor(element) {
     this._element = element;
   }
   clearAll() {
-    const el = document.querySelectorAll(".grid-item");
+    const el = this._element.querySelectorAll(".grid-item");
     el.forEach((element) => {
-      element.setAttribute("src", "img/no_goblin.png");
+      element.setAttribute("src", noGoblinImg);
+      element.removeAttribute("data-active");
     });
   }
 
   addGoblin(position) {
-    const el = document.querySelectorAll(".grid-item");
-    el[position].setAttribute("src", "img/goblin.png");
+    const el = this._element.querySelectorAll(".grid-item");
+    el[position].setAttribute("src", goblimImg);
+    el[position].dataset.active = "true";
   }
 }
+
+// const game = new Game();
+// const game2 = new Game();
+// // game1 this.el !== game2 this.el
